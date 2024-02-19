@@ -1,5 +1,8 @@
-import { homePage, aboutPage, notFoundPage } from "./components.js";
+import { homePage, aboutPage, notFoundPage, navBar } from "./components.js";
 
+/**
+ * Initializes the application and sets up the navigation routes.
+ */
 const app = () => {
     const routes = {
         "/": homePage,
@@ -33,11 +36,6 @@ const app = () => {
     document.getElementById("root").prepend(createNavBar());
 
     function createNavBar() {
-        const navBar = nav(
-            a("Inicio").setAttr("href", "#/"),
-            a("Acerca De").setAttr("href", "#/about")
-        );
-
         function updateActiveLink() {
             const currentHash = window.location.hash || "#/";
             document.querySelectorAll("nav a").forEach((link) => {
