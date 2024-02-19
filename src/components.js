@@ -7,7 +7,7 @@ export const homePage = () => {
         h1("Homepage"),
         p(
             "Welcome to my SPA. Please use the navbar to navigate."
-        )
+        ),
     );
 }
 
@@ -42,6 +42,6 @@ export const notFoundPage = () => {
  * @type {HTMLElement}
  */
 export const navBar = nav(
-    a("Inicio").setAttr("href", "#/"),
-    a("Acerca De").setAttr("href", "#/about")
+    a("Home").setAttr("href", "#/"),
+    a("About us").setAttr("href", "#/about")
 );
